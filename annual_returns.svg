@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 268" font-family="Arial" font-size="11"><rect width="100%" height="100%" fill="#fff"/>
+<text x="60" y="14" font-weight="bold">Rendement annuel (% du solde en début d'année)</text>
+<line x1="60" x2="705" y1="190" y2="190" stroke="#888"/>
+<rect x="66" y="190" width="47" height="15" fill="#c0392b"/>
+<text x="89" y="217" text-anchor="middle">-3%</text>
+<text x="89" y="260" text-anchor="middle">2016</text>
+<rect x="125" y="166" width="47" height="24" fill="#2e7d32"/>
+<text x="148" y="162" text-anchor="middle">5%</text>
+<text x="148" y="260" text-anchor="middle">2017</text>
+<rect x="183" y="190" width="47" height="42" fill="#c0392b"/>
+<text x="207" y="244" text-anchor="middle">-9%</text>
+<text x="207" y="260" text-anchor="middle">2018</text>
+<rect x="242" y="163" width="47" height="27" fill="#2e7d32"/>
+<text x="265" y="159" text-anchor="middle">6%</text>
+<text x="265" y="260" text-anchor="middle">2019</text>
+<rect x="301" y="50" width="47" height="141" fill="#2e7d32"/>
+<text x="324" y="46" text-anchor="middle">29%</text>
+<text x="324" y="260" text-anchor="middle">2020</text>
+<rect x="359" y="25" width="47" height="165" fill="#2e7d32"/>
+<text x="382" y="21" text-anchor="middle">34%</text>
+<text x="382" y="260" text-anchor="middle">2021</text>
+<rect x="418" y="190" width="47" height="17" fill="#c0392b"/>
+<text x="441" y="219" text-anchor="middle">-3%</text>
+<text x="441" y="260" text-anchor="middle">2022</text>
+<rect x="476" y="103" width="47" height="87" fill="#2e7d32"/>
+<text x="500" y="99" text-anchor="middle">18%</text>
+<text x="500" y="260" text-anchor="middle">2023</text>
+<rect x="535" y="149" width="47" height="41" fill="#2e7d32"/>
+<text x="558" y="145" text-anchor="middle">8%</text>
+<text x="558" y="260" text-anchor="middle">2024</text>
+<rect x="594" y="129" width="47" height="61" fill="#2e7d32"/>
+<text x="617" y="125" text-anchor="middle">12%</text>
+<text x="617" y="260" text-anchor="middle">2025</text>
+<rect x="652" y="103" width="47" height="87" fill="#2e7d32"/>
+<text x="676" y="99" text-anchor="middle">18%</text>
+<text x="676" y="260" text-anchor="middle">2026</text>
+</svg>
