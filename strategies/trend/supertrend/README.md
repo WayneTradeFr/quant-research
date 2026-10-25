@@ -25,7 +25,7 @@ Inputs exacts : [`SuperTrend_M30_tested.set`](SuperTrend_M30_tested.set). Code :
 ## Protocole de test
 
 - Optimisation en **IS 2016-2021** (fin 2021 incluse), validation en **OOS 2022-aujourd'hui**, puis test sur toute la période (2016-02-08 → 2026-10-23).
-- Données : IC Markets (EU) Demo, XAUUSD, qualité d'historique 87 %, 13,5 M de ticks. Dépôt initial 100 000 USD, levier 1:100.
+- Données : IC Markets (EU) Demo, XAUUSD, qualité d'historique 87 %. Les exécutions du rapport n'apparaissent qu'aux secondes 0, 20, 40 et 59 : les ticks sont synthétiques (générés depuis des barres M1), pas des ticks réels. Dépôt initial 100 000 USD, levier 1:100.
 - Compte de type hedging : chaque ajout est une position séparée. Le « nombre de trades » MT5 (2 793) compte les positions ; on dénombre **1 795 signaux** (entrées initiales) dont 998 ajouts de pyramide.
 
 ## Résultats
@@ -86,6 +86,7 @@ Les ajouts sont individuellement rentables (998 positions, +50 594 USD, PF 1,33)
 4. **Capitalisation.** Le risque est en % du solde : comparer les années en %, pas en dollars.
 5. **Un seul actif retenu.** Les tests sur d'autres marchés n'ont été concluants que sur l'or et, en long seulement, sur le Nasdaq ; US500 et DXY sont perdants.
 6. **Optimisation** : ATR, multiplicateur, DEMA et pullback ont été ajustés ; pas encore de carte de sensibilité ni de walk-forward.
+7. **Ticks synthétiques.** L'entrée sur pullback utilise des bougies M5 et des sorties au marché : l'effet de la modélisation des ticks n'a pas été mesuré. Voir le [post-mortem AMRM](../../../research/amrm-postmortem/README.md) pour un exemple où ce type d'effet fabriquait l'avantage.
 
 ## Prochaines étapes
 
@@ -93,4 +94,5 @@ Les ajouts sont individuellement rentables (998 positions, +50 594 USD, PF 1,33)
 - Carte de sensibilité (période ATR, multiplicateur, période DEMA).
 - Walk-forward glissant.
 - Test avec commissions réalistes.
+- Relancer en ticks réels pour confirmer les résultats.
 - Test « sans les N meilleurs trades » et bootstrap de la séquence de trades.

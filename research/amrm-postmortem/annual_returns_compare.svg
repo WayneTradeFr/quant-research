@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Arial" font-size="11"><rect width="100%" height="100%" fill="#fff"/>
+<text x="55" y="14" font-weight="bold">Rendement annuel (%) : sortie au marché après +1R vs SL/TP symétriques</text>
+<rect x="470" y="20" width="10" height="10" fill="#c0392b"/><text x="484" y="29">Sortie au marché à +1R</text>
+<rect x="470" y="36" width="10" height="10" fill="#2e7d32"/><text x="484" y="45">SL 1 ATR / TP 1 ATR (ordres en attente)</text>
+<line x1="55" x2="710" y1="239" y2="239" stroke="#ddd"/><text x="50" y="243" text-anchor="end">0%</text>
+<line x1="55" x2="710" y1="187" y2="187" stroke="#ddd"/><text x="50" y="191" text-anchor="end">50%</text>
+<line x1="55" x2="710" y1="135" y2="135" stroke="#ddd"/><text x="50" y="139" text-anchor="end">100%</text>
+<line x1="55" x2="710" y1="82" y2="82" stroke="#ddd"/><text x="50" y="86" text-anchor="end">150%</text>
+<line x1="55" x2="710" y1="30" y2="30" stroke="#ddd"/><text x="50" y="34" text-anchor="end">200%</text>
+<line x1="55" x2="710" y1="239" y2="239" stroke="#888"/>
+<rect x="59" y="47" width="25" height="193" fill="#c0392b"/>
+<rect x="85" y="215" width="25" height="24" fill="#2e7d32"/>
+<text x="85" y="286" text-anchor="middle">2016</text>
+<rect x="118" y="147" width="25" height="92" fill="#c0392b"/>
+<rect x="144" y="220" width="25" height="19" fill="#2e7d32"/>
+<text x="144" y="286" text-anchor="middle">2017</text>
+<rect x="177" y="219" width="25" height="20" fill="#c0392b"/>
+<rect x="203" y="239" width="25" height="4" fill="#2e7d32"/>
+<text x="203" y="286" text-anchor="middle">2018</text>
+<rect x="236" y="230" width="25" height="9" fill="#c0392b"/>
+<rect x="262" y="239" width="25" height="10" fill="#2e7d32"/>
+<text x="262" y="286" text-anchor="middle">2019</text>
+<rect x="295" y="218" width="25" height="21" fill="#c0392b"/>
+<rect x="321" y="238" width="25" height="2" fill="#2e7d32"/>
+<text x="321" y="286" text-anchor="middle">2020</text>
+<rect x="354" y="203" width="25" height="36" fill="#c0392b"/>
+<rect x="380" y="230" width="25" height="9" fill="#2e7d32"/>
+<text x="380" y="286" text-anchor="middle">2021</text>
+<rect x="414" y="236" width="25" height="4" fill="#c0392b"/>
+<rect x="439" y="239" width="25" height="11" fill="#2e7d32"/>
+<text x="439" y="286" text-anchor="middle">2022</text>
+<rect x="473" y="235" width="25" height="4" fill="#c0392b"/>
+<rect x="498" y="239" width="25" height="11" fill="#2e7d32"/>
+<text x="498" y="286" text-anchor="middle">2023</text>
+<rect x="532" y="228" width="25" height="11" fill="#c0392b"/>
+<rect x="557" y="239" width="25" height="6" fill="#2e7d32"/>
+<text x="557" y="286" text-anchor="middle">2024</text>
+<rect x="591" y="214" width="25" height="25" fill="#c0392b"/>
+<rect x="616" y="229" width="25" height="10" fill="#2e7d32"/>
+<text x="616" y="286" text-anchor="middle">2025</text>
+<rect x="650" y="213" width="25" height="26" fill="#c0392b"/>
+<rect x="675" y="228" width="25" height="11" fill="#2e7d32"/>
+<text x="675" y="286" text-anchor="middle">2026</text>
+</svg>

@@ -24,7 +24,7 @@ Inputs exacts : [`Donchian_TF_M30_tested.set`](Donchian_TF_M30_tested.set). Code
 ## Protocole de test
 
 - Optimisation en **IS 2018-2023**, validation en **OOS 2023 - fin sept. 2026**, puis test sur **2016 - oct. 2026**.
-- Données : IC Markets (EU) Demo, XAUUSD, qualité d'historique 87 %, 13,5 M de ticks. Dépôt initial 100 000 USD, levier 1:100.
+- Données : IC Markets (EU) Demo, XAUUSD, qualité d'historique 87 %. Les exécutions du rapport n'apparaissent qu'aux secondes 0, 20, 40 et 59 : les ticks sont synthétiques (générés depuis des barres M1), pas des ticks réels. Dépôt initial 100 000 USD, levier 1:100.
 
 ## Résultats (2016-01-19 → 2026-10-23)
 
@@ -73,6 +73,7 @@ Découpage par date de clôture des trades.
 4. **Un seul actif, un seul backtest.** Pas encore de test sur d'autres instruments ni de walk-forward complet.
 5. **Optimisation sur les paramètres** : la proximité IS/OOS est encourageante, mais ne remplace pas une étude de sensibilité.
 6. **Swap significatif** : la rentabilité dépend des conditions de financement du broker.
+7. **Dépassement des sorties partielles.** Les sorties partielles à +1R sont fermées au marché au premier tick au-delà du niveau. Avec des ticks synthétiques, elles sortent en moyenne à +1,20R (médiane +1,11R) au lieu de +1,00R : ce dépassement représente environ 72 700 USD, soit 37 % du profit net (le profit resterait positif, autour de 124 000 USD, sans lui). Voir le [post-mortem AMRM](../../../research/amrm-postmortem/README.md) pour le même effet sur une autre stratégie.
 
 ## Prochaines étapes
 
@@ -80,4 +81,5 @@ Découpage par date de clôture des trades.
 - Heatmap de sensibilité des paramètres clés (périodes d'entrée/sortie).
 - Walk-forward glissant.
 - Test avec commissions réalistes.
+- Relancer en ticks réels, avec et sans sortie partielle (`InpUsePartialExit=false`).
 - Application à d'autres instruments.

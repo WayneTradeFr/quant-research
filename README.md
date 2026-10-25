@@ -17,7 +17,7 @@ Recherche en trading systématique : stratégies, méthodologie de validation et
 |---|---|---|
 | Trend following | [Donchian TrendFollow (XAUUSD M30)](strategies/trend/donchian/README.md) | Publié |
 | Trend following | [SuperTrend + pullback (XAUUSD M30)](strategies/trend/supertrend/README.md) | Publié |
-| Trend following | AMRM | À venir (révision en cours : entrées sur clôture de bougie) |
+| Analyse | [AMRM : post-mortem d'un faux avantage](research/amrm-postmortem/README.md) | Publié |
 
 ## Structure
 
@@ -26,6 +26,8 @@ strategies/
 └── trend/
     ├── donchian/     # code .mq5, inputs testés (.set), graphiques, README
     └── supertrend/   # idem
+research/
+└── amrm-postmortem/  # analyse d'un backtest dont l'avantage était un artefact
 ```
 
 ## Auteur
