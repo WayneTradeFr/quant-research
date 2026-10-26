@@ -86,7 +86,7 @@ Les ajouts sont individuellement rentables (998 positions, +50 594 USD, PF 1,33)
 4. **Capitalisation.** Le risque est en % du solde : comparer les années en %, pas en dollars.
 5. **Un seul actif retenu.** Les tests sur d'autres marchés n'ont été concluants que sur l'or et, en long seulement, sur le Nasdaq ; US500 et DXY sont perdants.
 6. **Optimisation** : ATR, multiplicateur, DEMA et pullback ont été ajustés ; pas encore de carte de sensibilité ni de walk-forward.
-7. **Ticks synthétiques.** L'entrée sur pullback utilise des bougies M5 et des sorties au marché : l'effet de la modélisation des ticks n'a pas été mesuré. Voir le [post-mortem AMRM](../../../research/amrm-postmortem/README.md) pour un exemple où ce type d'effet fabriquait l'avantage.
+7. **Ticks synthétiques.** Les sorties passent surtout par le stop en attente placé sur la ligne SuperTrend (suivie en cliquet), donc elles sont peu exposées au dépassement observé sur d'autres stratégies. L'effet de la modélisation des ticks sur l'entrée par pullback (bougies M5) et sur la pyramide n'a toutefois pas été mesuré. Voir le [post-mortem AMRM](../../../research/amrm-postmortem/README.md) pour un exemple où ce type d'effet fabriquait l'avantage.
 
 ## Prochaines étapes
 
@@ -94,5 +94,5 @@ Les ajouts sont individuellement rentables (998 positions, +50 594 USD, PF 1,33)
 - Carte de sensibilité (période ATR, multiplicateur, période DEMA).
 - Walk-forward glissant.
 - Test avec commissions réalistes.
-- Relancer en ticks réels pour confirmer les résultats.
+- Relancer en ticks réels pour confirmer les résultats (en attente d'un ordinateur assez puissant).
 - Test « sans les N meilleurs trades » et bootstrap de la séquence de trades.
