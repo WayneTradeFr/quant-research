@@ -6,7 +6,7 @@ and a comparison of three risk-per-trade levels.
 
 > Research project. Backtest results only, no live track record yet. Not investment advice.
 
-![Equity curves](docs/equity_curve.png)
+![Equity curves](equity_curve.png)
 
 ## Strategy
 
@@ -61,7 +61,7 @@ Out-of-sample performance degrades (annualised return roughly halves at 1%) but 
 
 ### Annual return (% of start-of-year balance)
 
-![Annual returns](docs/yearly_returns.png)
+![Annual returns](yearly_returns.png)
 
 | Year | Risk 0.5% | Risk 1% | Risk 1.5% |
 |---|---|---|---|
@@ -84,7 +84,7 @@ Out-of-sample performance degrades (annualised return roughly halves at 1%) but 
 - **The ADX entry threshold is not stable.** The in-sample optimum (30) was an isolated peak that did not hold out-of-sample, so a low threshold (20) was kept for trade count.
 - **Hour-of-day filters were rejected**: results flip sign between adjacent hours and between periods (noise).
 
-Details in [`docs/validation.md`](docs/validation.md).
+Details in [`validation.md`](validation.md).
 
 ## Limitations
 
@@ -97,16 +97,16 @@ Details in [`docs/validation.md`](docs/validation.md).
 ## Repository layout
 
 ```
-src/ADX_DMI_EA.mq5        Expert Advisor (MetaTrader 5)
-docs/validation.md        Methodology, ablation study, lessons learned
-docs/equity_curve.png     Balance and drawdown, three risk levels
-docs/yearly_returns.png   Annual returns, three risk levels
-docs/yearly_returns.csv   Annual returns (data)
+ADX_DMI_EA.mq5        Expert Advisor (MetaTrader 5)
+validation.md         Methodology, ablation study, lessons learned
+equity_curve.png      Balance and drawdown, three risk levels
+yearly_returns.png    Annual returns, three risk levels
+yearly_returns.csv    Annual returns (data)
 ```
 
 ## Usage
 
-1. Copy `src/ADX_DMI_EA.mq5` to `MQL5/Experts/` and compile in MetaEditor.
+1. Copy `ADX_DMI_EA.mq5` to `MQL5/Experts/` and compile in MetaEditor.
 2. Strategy Tester: XAUUSD, H1, real ticks or "1 minute OHLC", deposit 100 000.
 3. Set the inputs from the table above (the file defaults are the starting values of the research, not the final ones).
 4. Session hours are **server time**: check your broker's offset.
