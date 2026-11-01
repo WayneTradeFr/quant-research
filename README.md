@@ -1,39 +1,89 @@
 # quant-research
 
-Recherche en trading systématique : stratégies, méthodologie de validation et résultats présentés **tels quels, limites comprises**.
+Recherche systématique en trading : stratégies, résultats backtestés, méthodologie de validation et limites explicites.
 
-> **EN summary** — Systematic trading research on XAUUSD (MQL5). Each strategy comes with its tested parameters, in-sample / out-of-sample split, cost breakdown and an explicit limitations section. The goal is to show methodology (hypothesis, validation, honest failure analysis), not to sell a backtest.
+> Systematic trading research on XAUUSD (MQL5). Each strategy is published with tested parameters, in-sample/out-of-sample splits, cost breakdown and an explicit limitations section.
 
-## Principes
+## Objectif du projet
 
-- **Hypothèse d'abord** : chaque stratégie part d'une idée de marché explicite (momentum, retour à la moyenne, etc.).
-- **Séparation IS / OOS** : optimisation sur une période, validation sur une autre, puis test sur l'historique complet.
-- **Coûts inclus** : spread, swap, commission documentés séparément.
-- **Limites assumées** : concentration des gains, drawdown, dépendance au régime de marché.
+Ce dépôt vise à documenter des idées de trading de façon rigoureuse :
 
-## Contenu
+- hypothèse de marché claire avant l'implémentation ;
+- séparation en période d'optimisation et de validation ;
+- résultats accompagnés de leurs limites ;
+- coût du trading et qualité des données étudiés ;
+- publication des réglages testés pour permettre une lecture critique.
 
-| Famille | Stratégie | Statut |
-|---|---|---|
-| Trend following | [Donchian TrendFollow (XAUUSD M30)](strategies/trend/donchian/README.md) | Publié |
-| Trend following | [SuperTrend + pullback (XAUUSD M30)](strategies/trend/supertrend/README.md) | Publié |
-| Trend following | [ADX/DMI close-only (XAUUSD H1)](strategies/trend/adx-dmi/README.md) | Publié |
-| Analyse | [AMRM : post-mortem d'un faux avantage](research/amrm-postmortem/README.md) | Publié |
-| Analyse | [Comparaison avec l'achat-conservation de l'or](research/buy-and-hold-benchmark/README.md) | Publié |
+## Principes de recherche
 
-## Structure
+- Hypothèse d'abord : chaque stratégie part d'une logique de marché explicite.
+- IS / OOS : optimisation puis validation hors échantillon.
+- Coûts inclus : spread, swap et conditions de test documentées.
+- Limites assumées : concentration des gains, drawdown, dépendance au régime de marché.
+- Transparence : résultats présentés tels quels, avec leurs biais et leurs frictions.
 
+## Stratégies publiées
+
+| Famille | Stratégie | Période / instrument | Statut |
+|---|---|---|---|
+| Trend following | [Donchian TrendFollow (XAUUSD M30)](strategies/trend/donchian/README.md) | XAUUSD, M30 | Publié |
+| Trend following | [SuperTrend + pullback (XAUUSD M30)](strategies/trend/supertrend/README.md) | XAUUSD, M30 | Publié |
+| Trend following | [ADX/DMI close-only (XAUUSD H1)](strategies/trend/adx-dmi/README.md) | XAUUSD, H1 | Publié |
+| Analyse | [AMRM : post-mortem d'un faux avantage](research/amrm-postmortem/README.md) | XAUUSD, H1 | Publié |
+| Benchmark | [Comparaison avec l'achat-conservation de l'or](research/buy-and-hold-benchmark/README.md) | XAUUSD / or | Publié |
+
+## Structure du dépôt
+
+```text
+quant-research/
+├── README.md
+├── strategies/
+│   └── trend/
+│       ├── donchian/
+│       │   ├── Donchian_TrendFollow_EA.mq5
+│       │   ├── Donchian_TF_M30_tested.set
+│       │   ├── README.md
+│       │   ├── annual_pnl.svg
+│       │   └── equity.svg
+│       ├── supertrend/
+│       │   ├── SuperTrend_ER_EA_v3.mq5
+│       │   ├── SuperTrend_M30_tested.set
+│       │   ├── README.md
+│       │   ├── annual_returns.svg
+│       │   └── equity.svg
+│       └── adx-dmi/
+│           ├── ADX_DMI_EA.mq5
+│           ├── README.md
+│           ├── validation.md
+│           ├── equity_curve.png
+│           ├── yearly_returns.png
+│           └── yearly_returns.csv
+├── research/
+│   ├── amrm-postmortem/
+│   │   ├── AMRM_Quant_Manhattan_V2_1.mq5
+│   │   ├── README.md
+│   │   ├── annual_returns_compare.svg
+│   │   ├── set_B_partial_target1R.set
+│   │   └── set_C_symmetric_SL1_TP1.set
+│   └── buy-and-hold-benchmark/
+│       ├── README.md
+│       └── equity_comparison.svg
+└── LICENSE
 ```
-strategies/
-└── trend/
-    ├── donchian/     # code .mq5, inputs testés (.set), graphiques, README
-    ├── supertrend/   # idem
-    └── adx-dmi/      # code .mq5, graphiques (equity, rendements annuels), README, validation
-research/
-├── amrm-postmortem/  # analyse d'un backtest dont l'avantage était un artefact
-└── buy-and-hold-benchmark/  # stratégies vs achat-conservation de l'or
-```
+
+## Comment lire les résultats
+
+- Les résultats sont des backtests, pas des garanties de performance futures.
+- L'objectif n'est pas de "prouver" une stratégie, mais d'identifier des idées intéressantes et leurs failings.
+- Les meilleurs résultats peuvent être le produit de données, règles de sortie ou filtres qui ne se maintiennent pas hors échantillon.
+- Les analyses incluent des coûts et des limites ; il faut toujours relire le README de la stratégie concernée avant d'en conclure quoi que ce soit.
 
 ## Auteur
 
-Wayne — étudiant, trading systématique, objectif : marchés de capitaux quantitatifs (market making / HFT). Outils : MQL5, Python, C++ (en apprentissage).
+Wayne — étudiant en trading systématique, avec un intérêt particulier pour la recherche quantitative sur les marchés financiers et les méthodes de validation robustes.
+
+Outils principaux : MQL5, Python, C++ (apprentissage continu).
+
+## À retenir
+
+Ce dépôt ne cherche pas à vendre un signal miracle. Il documente des idées de recherche, leurs conditions de test, et les limites qui les affectent.
