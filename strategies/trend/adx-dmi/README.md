@@ -174,9 +174,3 @@ docs/equity_curve.png                 solde et drawdown, trois niveaux de risque
 docs/yearly_returns.png / .csv        rendements annuels
 ```
 
-## Utilisation
-
-1. Copier `src/ADX_DMI_EA.mq5` dans `MQL5/Experts/` et compiler avec MetaEditor.
-2. Testeur de stratégie : XAUUSD, H1, ticks réels si possible, dépôt 100 000.
-3. Charger un fichier `.set` (onglet Paramètres → clic droit → Charger).
-4. Les heures de session sont en **heure serveur** : vérifier le décalage du broker.
